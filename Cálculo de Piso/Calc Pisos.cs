@@ -18,7 +18,7 @@ namespace Cálculo_de_Piso
 
         private void btn_Calc_Qtd_Pisos_Click_1(object sender, EventArgs e)
         {
-            double compComodo, largComodo, areaComodo, compPisos, largPisos, areaPisos, qtdPisos;
+            decimal compComodo, largComodo, areaComodo, compPisos, largPisos, areaPisos, qtdPisos;
 
             if (txt_Comp_Cômodo.Text == "")
             {
@@ -43,22 +43,29 @@ namespace Cálculo_de_Piso
 
             else
             {
-                compComodo = Convert.ToDouble(txt_Comp_Cômodo.Text);
-                largComodo = Convert.ToDouble(txt_Larg_Cômodo.Text);
-                compPisos = Convert.ToDouble(cmb_Comp_Piso.Text);
-                largPisos = Convert.ToDouble(cmb_Larg_Piso.Text);
+                compComodo = Convert.ToDecimal(txt_Comp_Cômodo.Text);
+                largComodo = Convert.ToDecimal(txt_Larg_Cômodo.Text);
+                compPisos = Convert.ToDecimal(cmb_Comp_Piso.Text);
+                largPisos = Convert.ToDecimal(cmb_Larg_Piso.Text);
 
                 // Convertendo as medidas do piso de cm para m
-                compPisos = compPisos / 100;
-                largPisos = largPisos / 100;
+                compPisos /= 100;
+                largPisos /= 100;
 
                 areaComodo = compComodo * largComodo;
 
                 areaPisos = compPisos * largPisos;
 
                 qtdPisos = areaComodo / areaPisos;
-                txt_Qtd_Pisos.Text = String.Format("{0:n0}", qtdPisos);
+
+                qtdPisos /= 1000;
+                txt_Qtd_Pisos.Text = String.Format("{0:n2}", qtdPisos);
             }
+        }
+
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

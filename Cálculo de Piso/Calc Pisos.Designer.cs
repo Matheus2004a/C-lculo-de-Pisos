@@ -40,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Calc_Qtd_Pisos = new System.Windows.Forms.Button();
             this.txt_Qtd_Pisos = new System.Windows.Forms.TextBox();
+            this.btn_Limpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -124,9 +125,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(31, 200);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(223, 16);
+            this.label5.Size = new System.Drawing.Size(252, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Selecione o comprimento dos pisos";
+            this.label5.Text = "Selecione o comprimento dos pisos (cm)";
             // 
             // label6
             // 
@@ -134,16 +135,16 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 16);
+            this.label6.Size = new System.Drawing.Size(213, 16);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Selecionea largura dos pisos";
+            this.label6.Text = "Selecionea largura dos pisos (cm)";
             // 
             // btn_Calc_Qtd_Pisos
             // 
             this.btn_Calc_Qtd_Pisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Calc_Qtd_Pisos.Location = new System.Drawing.Point(43, 337);
+            this.btn_Calc_Qtd_Pisos.Location = new System.Drawing.Point(32, 321);
             this.btn_Calc_Qtd_Pisos.Name = "btn_Calc_Qtd_Pisos";
-            this.btn_Calc_Qtd_Pisos.Size = new System.Drawing.Size(183, 31);
+            this.btn_Calc_Qtd_Pisos.Size = new System.Drawing.Size(107, 47);
             this.btn_Calc_Qtd_Pisos.TabIndex = 12;
             this.btn_Calc_Qtd_Pisos.Text = "Calcular qtd. de pisos";
             this.btn_Calc_Qtd_Pisos.UseVisualStyleBackColor = true;
@@ -162,11 +163,23 @@
             this.txt_Qtd_Pisos.Text = "0";
             this.txt_Qtd_Pisos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btn_Limpar
+            // 
+            this.btn_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.Location = new System.Drawing.Point(145, 321);
+            this.btn_Limpar.Name = "btn_Limpar";
+            this.btn_Limpar.Size = new System.Drawing.Size(107, 47);
+            this.btn_Limpar.TabIndex = 14;
+            this.btn_Limpar.Text = "Limpar";
+            this.btn_Limpar.UseVisualStyleBackColor = true;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 390);
+            this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.txt_Qtd_Pisos);
             this.Controls.Add(this.btn_Calc_Qtd_Pisos);
             this.Controls.Add(this.label6);
@@ -201,6 +214,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_Calc_Qtd_Pisos;
         private System.Windows.Forms.TextBox txt_Qtd_Pisos;
+        private System.Windows.Forms.Button btn_Limpar;
     }
 }
 
