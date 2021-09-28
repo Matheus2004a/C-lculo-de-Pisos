@@ -10,6 +10,6 @@ C:\Users\Aurelio\documents\visual studio 2010\Projects\Cálculo de Piso\Cálculo
 C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\bin\Debug\Cálculo de Piso.exe
 C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\bin\Debug\Cálculo de Piso.pdb
 C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\obj\x86\Debug\Cálculo de Piso.csprojResolveAssemblyReference.cache
-C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\obj\x86\Debug\Cálculo_de_Piso.Form1.resources
 C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\obj\x86\Debug\Cálculo_de_Piso.Properties.Resources.resources
 C:\Users\Aurelio\Documents\Visual Studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\obj\x86\Debug\Cálculo de Piso.csproj.GenerateResource.Cache
+C:\Users\Aurelio\documents\visual studio 2010\Projects\Cálculo de Piso\Cálculo de Piso\obj\x86\Debug\Cálculo_de_Piso.form_Qtd_Pisos.resources

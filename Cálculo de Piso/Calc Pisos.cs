@@ -9,16 +9,16 @@ using System.Windows.Forms;
 
 namespace Cálculo_de_Piso
 {
-    public partial class Form1 : Form
+    public partial class form_Qtd_Pisos : Form
     {
-        public Form1()
+        public form_Qtd_Pisos()
         {
             InitializeComponent();
         }
 
         private void btn_Calc_Qtd_Pisos_Click_1(object sender, EventArgs e)
         {
-            decimal compComodo, largComodo, areaComodo, compPisos, largPisos, areaPisos, qtdPisos;
+            double compComodo, largComodo, areaComodo, compPisos, largPisos, areaPisos, qtdPisos;
 
             if (txt_Comp_Cômodo.Text == "")
             {
@@ -43,10 +43,10 @@ namespace Cálculo_de_Piso
 
             else
             {
-                compComodo = Convert.ToDecimal(txt_Comp_Cômodo.Text);
-                largComodo = Convert.ToDecimal(txt_Larg_Cômodo.Text);
-                compPisos = Convert.ToDecimal(cmb_Comp_Piso.Text);
-                largPisos = Convert.ToDecimal(cmb_Larg_Piso.Text);
+                compComodo = Convert.ToDouble(txt_Comp_Cômodo.Text);
+                largComodo = Convert.ToDouble(txt_Larg_Cômodo.Text);
+                compPisos = Convert.ToDouble(cmb_Comp_Piso.Text);
+                largPisos = Convert.ToDouble(cmb_Larg_Piso.Text);
 
                 // Convertendo as medidas do piso de cm para m
                 compPisos /= 100;
@@ -58,14 +58,65 @@ namespace Cálculo_de_Piso
 
                 qtdPisos = areaComodo / areaPisos;
 
-                qtdPisos /= 1000;
                 txt_Qtd_Pisos.Text = String.Format("{0:n2}", qtdPisos);
             }
         }
 
+        private void txt_Comp_Cômodo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Larg_Cômodo.Focus();
+            }
+        }
+
+        private void txt_Larg_Cômodo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmb_Comp_Piso.Focus();
+            }
+        }
+
+        private void cmb_Comp_Piso_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmb_Larg_Piso.Focus();
+            }
+        }
+
+        private void txt_Comp_Cômodo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_Larg_Cômodo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void form_Qtd_Pisos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja sair do formulário?", "Mensagem de aviso", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
+        }
+
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
-            
+            txt_Larg_Cômodo.Clear();
+            txt_Comp_Cômodo.Clear();
+            cmb_Comp_Piso.SelectedIndex = -1;
+            cmb_Larg_Piso.SelectedIndex = -1;
+            txt_Comp_Cômodo.Focus();
         }
     }
 }

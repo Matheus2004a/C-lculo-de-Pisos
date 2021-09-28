@@ -1,6 +1,6 @@
 ﻿namespace Cálculo_de_Piso
 {
-    partial class Form1
+    partial class form_Qtd_Pisos
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,8 @@
             this.txt_Comp_Cômodo.Name = "txt_Comp_Cômodo";
             this.txt_Comp_Cômodo.Size = new System.Drawing.Size(204, 20);
             this.txt_Comp_Cômodo.TabIndex = 1;
+            this.txt_Comp_Cômodo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Comp_Cômodo_KeyDown);
+            this.txt_Comp_Cômodo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Comp_Cômodo_KeyPress);
             // 
             // label2
             // 
@@ -86,6 +88,8 @@
             this.txt_Larg_Cômodo.Name = "txt_Larg_Cômodo";
             this.txt_Larg_Cômodo.Size = new System.Drawing.Size(204, 20);
             this.txt_Larg_Cômodo.TabIndex = 3;
+            this.txt_Larg_Cômodo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Larg_Cômodo_KeyDown);
+            this.txt_Larg_Cômodo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Larg_Cômodo_KeyPress);
             // 
             // label4
             // 
@@ -107,6 +111,7 @@
             this.cmb_Comp_Piso.Name = "cmb_Comp_Piso";
             this.cmb_Comp_Piso.Size = new System.Drawing.Size(204, 21);
             this.cmb_Comp_Piso.TabIndex = 8;
+            this.cmb_Comp_Piso.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_Comp_Piso_KeyDown);
             // 
             // cmb_Larg_Piso
             // 
@@ -135,9 +140,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(213, 16);
+            this.label6.Size = new System.Drawing.Size(216, 16);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Selecionea largura dos pisos (cm)";
+            this.label6.Text = "Selecione a largura dos pisos (cm)";
             // 
             // btn_Calc_Qtd_Pisos
             // 
@@ -174,7 +179,7 @@
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // Form1
+            // form_Qtd_Pisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,9 +197,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Comp_Cômodo);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "form_Qtd_Pisos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_Qtd_Pisos_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
