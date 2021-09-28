@@ -21,5 +21,5 @@ Este projeto consiste em realizar a contagem da quantidade de pisos para se colo
 
 ## Resultado
 <p align="center">
-  <img src="assets/gif/Animação Projeto.gif" width="800" height=700>
+  <img src="assets/gif/Animação Projeto.gif" width="800" height=900>
 </p>
