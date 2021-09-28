@@ -18,3 +18,8 @@ Este projeto consiste em realizar a contagem da quantidade de pisos para se colo
 |       ├── Debug
 |           └── Cálculo de Piso.exe
 ```
+
+## Resultado
+<p align="center">
+  <img src="assets/gif/Animação Projeto.gif" width="800" height=700>
+</p>
